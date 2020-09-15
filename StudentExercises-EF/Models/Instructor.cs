@@ -21,6 +21,8 @@ namespace StudentExercises_EF.Models
         public string Specialty { get; set; }
         public int CohortId { get; set; }
         public Cohort Cohort { get; set; }
+
+        public List<Student> AssignedStudents { get; set; } = new List<Student>();
     }
 }
 

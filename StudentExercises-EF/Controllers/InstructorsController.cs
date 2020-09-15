@@ -37,6 +37,7 @@ namespace StudentExercises_EF.Controllers
 
             var instructor = await _context.Instructor
                 .Include(i => i.Cohort)
+                .Include(s => s.AssignedStudents)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (instructor == null)
             {
